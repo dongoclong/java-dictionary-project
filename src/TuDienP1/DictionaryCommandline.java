@@ -12,9 +12,9 @@ public class DictionaryCommandline {
 	public void showAllWord() {
 		Dictionary myDictionary = new Dictionary();
 		int count = 1;
-		System.out.println("No     | English  \t | Vietnamses");
+		System.out.println("No     | English  \t| Vietnamses");
 		for(Word i : myDictionary.listWord) {
-			System.out.println(count + "      |" + i.getWord_target() + "\t\t | " + i.getWord_explain());
+			System.out.println(count + "      |" + i.getWord_target() + "\t\t|" + i.getWord_explain());
 			count++;
 		}
 	}
@@ -26,16 +26,25 @@ public class DictionaryCommandline {
 	 */
 	public void dictionaryBasic() {
 		dictionaryManagemment.insertFromCommandline();
+//		dictionaryManagemment.removeWord();
+//		dictionaryManagemment.editWord();
+//		dictionaryManagemment.insertWord();
 		this.showAllWord();
 	}
 	
 	public void dictionaryAdvanced() throws FileNotFoundException {
 		dictionaryManagemment.insertFromFile();
-		dictionaryManagemment.dictionaryLookup();
 		this.showAllWord();
+		dictionaryManagemment.dictionaryLookup();
+//		this.showAllWord();
 	}
-//	public static void main(String []args) {
+	
+	/**
+	 * test thu chuong trinh trong main
+	 */
+//	public static void main(String []args) throws FileNotFoundException {
 //		DictionaryCommandline x = new DictionaryCommandline();
-//		x.dictionaryBasic();
+////		x.dictionaryBasic();
+////		x.dictionaryAdvanced();
 //	}
 }
