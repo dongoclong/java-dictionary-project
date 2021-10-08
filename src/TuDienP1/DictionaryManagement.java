@@ -71,14 +71,14 @@ public class DictionaryManagement {
 		Scanner scan = new Scanner(System.in);
 		String stringWord = scan.nextLine();
 		boolean check = false;
-		for(Word i : Dictionary.listWord) {
-			if(i.getWord_target().equalsIgnoreCase(stringWord)) {
+		for (Word i : Dictionary.listWord) {
+			if (i.getWord_target().equalsIgnoreCase(stringWord)) {
 				System.out.println("Tu nay da co trong tu dien roi ...");
 				check = true;
 				break;
 			}
 		}
-		if(!check) {
+		if (!check) {
 			System.out.println("Nhap nghia cua tu nay: ");
 			String stringExplain = scan.nextLine();
 			Dictionary.listWord.add(new Word(stringWord,stringExplain));
@@ -94,13 +94,13 @@ public class DictionaryManagement {
 		System.out.println("Nhap tu can xoa: ");
 		word_target = scan.nextLine();
 		boolean check = false;
-		for(Word i : Dictionary.listWord) {
-			if(i.getWord_target().equalsIgnoreCase(word_target)) {
+		for (Word i : Dictionary.listWord) {
+			if (i.getWord_target().equalsIgnoreCase(word_target)) {
 				Dictionary.listWord.remove(i);
 				check = true;
 			}
 		}
-		if(check) {
+		if (check) {
 			System.out.println("Xoa thanh cong tu trong tu dien");
 		} 
 		else {
@@ -116,8 +116,8 @@ public class DictionaryManagement {
 		Scanner scan = new Scanner(System.in);
 		String word = scan.nextLine();
 		boolean check = false;
-		for(Word i : Dictionary.listWord) {
-			if(i.getWord_target().equalsIgnoreCase(word)) {
+		for (Word i : Dictionary.listWord) {
+			if (i.getWord_target().equalsIgnoreCase(word)) {
 				System.out.println("Nhap tu moi: ");
 				String target = scan.nextLine();
 				i.setWord_target(target);
@@ -128,7 +128,7 @@ public class DictionaryManagement {
 				break;
 			}
 		}
-		if(!check) {
+		if (!check) {
 			System.out.println("Tu nay khong co trong tu dien");
 		}
 	}
