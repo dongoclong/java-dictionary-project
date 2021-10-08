@@ -36,8 +36,8 @@ public class DictionaryManagement {
 		Scanner scan = new Scanner(new File("dictionaries.txt"));
 		while(scan.hasNext()) {
 			String stringWord = scan.nextLine();
-			//trong file co dinh dang: phan cach giua tu va giai nghia la dau tab
-            // Su dung phương thuc useDelimiter() de dinh dang nhap vao
+//			trong file co dinh dang: phan cach giua tu va giai nghia la dau tab
+//            Su dung phương thuc useDelimiter() de dinh dang nhap vao				
 			Scanner s = new Scanner(stringWord).useDelimiter("\t");
 			Word _word = new Word();
 			_word.setWord_target(s.next());
@@ -133,5 +133,14 @@ public class DictionaryManagement {
 		}
 	}
 	
-	
+	public void dictionaryExportToFile() throws FileNotFoundException,IOException {
+		FileOutputStream file = new FileOutputStream("dictionaries.txt");
+		BufferedOutputStream bfileout = new BufferedOutputStream(file);
+		for (Word i : Dictionary.listWord) {
+			String line = i.getWord_target() + "\t" + i.getWord_explain();
+			bfileout.write(line.getBytes());
+			bfileout.write(System.lineSeparator().getBytes());
+		}
+		bfileout.close();
+	}
 }

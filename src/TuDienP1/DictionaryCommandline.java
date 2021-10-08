@@ -1,6 +1,11 @@
 package TuDienP1;
 
 import java.io.FileNotFoundException;
+//import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Scanner;
+//import java.io.BufferedOutputStream;
+//import java.io.File;
 
 public class DictionaryCommandline {
 	
@@ -26,25 +31,41 @@ public class DictionaryCommandline {
 	 */
 	public void dictionaryBasic() {
 		dictionaryManagemment.insertFromCommandline();
-//		dictionaryManagemment.removeWord();
-//		dictionaryManagemment.editWord();
+		dictionaryManagemment.removeWord();
+		dictionaryManagemment.editWord();
 //		dictionaryManagemment.insertWord();
 		this.showAllWord();
 	}
 	
-	public void dictionaryAdvanced() throws FileNotFoundException {
+	public void dictionaryAdvanced() throws FileNotFoundException, IOException{
 		dictionaryManagemment.insertFromFile();
-		this.showAllWord();
 		dictionaryManagemment.dictionaryLookup();
-//		this.showAllWord();
+		this.showAllWord();
+	}
+	
+	public void dictionarySreach() {
+		System.out.println("Nhap tu can tra: ");
+		String s;
+		Scanner scan = new Scanner(System.in);
+		s= scan.nextLine();
+		System.out.println("Cac tu : " + s + " la: ");
+//		forEach duyet listWord
+//		i.getWord_target().indexOf(s) dung de kiem tra co bao nhieu tu bat dau bang s or cung co the la s.target giong trong listWord
+		Dictionary.listWord.forEach((i) -> {
+			int index = i.getWord_target().indexOf(s);
+			if	(index == 0) {
+				System.out.println(i.getWord_target() + "\t" + i.getWord_explain());
+			}
+		});
 	}
 	
 	/**
 	 * test thu chuong trinh trong main
 	 */
-//	public static void main(String []args) throws FileNotFoundException {
-//		DictionaryCommandline x = new DictionaryCommandline();
-////		x.dictionaryBasic();
-////		x.dictionaryAdvanced();
-//	}
+	public static void main(String []args) throws FileNotFoundException {
+		DictionaryCommandline x = new DictionaryCommandline();
+		x.dictionaryBasic();
+//		x.dictionaryAdvanced();
+		x.dictionarySreach();
+	}
 }
