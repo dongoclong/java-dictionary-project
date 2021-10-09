@@ -51,13 +51,18 @@ public class DictionaryCommandline {
 		Scanner scan = new Scanner(System.in);
 		s= scan.nextLine();
 		System.out.println("Cac tu : " + s + " la: ");
+		boolean check = false;
 //		forEach duyet listWord
 //		i.getWord_target().indexOf(s) dung de kiem tra co bao nhieu tu bat dau bang s or cung co the la s.target giong trong listWord
 		for( Word i : Dictionary.listWord) {			
 			int index = i.getWord_target().indexOf(s);
 			if	(index == 0) {
-				System.out.println(i.getWord_target() + "\t" + i.getWord_explain());
+				System.out.println(i.getWord_target() + "\t|" + i.getWord_explain());
+				check = true;
 			}
+		}
+		if (!check) {
+			System.out.println("Khong co tu nay trong tu dien, than!");
 		}
 	}
 	
