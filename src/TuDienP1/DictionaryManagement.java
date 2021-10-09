@@ -54,10 +54,16 @@ public class DictionaryManagement {
 		System.out.println("Ban hay nhap tu muon tra: ");
 		Scanner scan = new Scanner(System.in);
 		a = scan.nextLine();
+		boolean check  = false;
 		for(Word i : myDictionary.listWord) {
 			if(i.getWord_target().equals(a)) {
 				System.out.println(a + "  mean :" + i.getWord_explain());
+				check = true;
+				break;
 			}
+		}
+		if(!check) {
+			System.out.println("Khong co tu nay trong tu dien, than!");
 		}
 	}
 	
