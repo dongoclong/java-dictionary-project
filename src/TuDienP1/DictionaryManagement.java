@@ -57,7 +57,7 @@ public class DictionaryManagement {
 		boolean check  = false;
 		for(Word i : myDictionary.listWord) {
 			if(i.getWord_target().equals(a)) {
-				System.out.println(a + "  mean :" + i.getWord_explain());
+				System.out.println(a + " mean  :" + i.getWord_explain());
 				check = true;
 				break;
 			}
@@ -125,11 +125,11 @@ public class DictionaryManagement {
 		for (Word i : Dictionary.listWord) {
 			if (i.getWord_target().equalsIgnoreCase(word)) {
 				System.out.println("Nhap tu moi: ");
-				String target = scan.nextLine();
-				i.setWord_target(target);
+				String Newtarget = scan.nextLine();
+				i.setWord_target(Newtarget);
 				System.out.println("Nghia cua tu moi la: ");
-				String eplain = scan.nextLine();
-				i.setWord_explain(eplain);
+				String Neweplain = scan.nextLine();
+				i.setWord_explain(Neweplain);
 				check = true;
 				break;
 			}
