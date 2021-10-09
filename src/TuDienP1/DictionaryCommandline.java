@@ -41,6 +41,8 @@ public class DictionaryCommandline {
 		dictionaryManagemment.insertFromFile();
 		dictionaryManagemment.dictionaryLookup();
 		this.showAllWord();
+		dictionaryManagemment.dictionaryExportToFile();
+		this.dictionarySreach();
 	}
 	
 	public void dictionarySreach() {
@@ -51,12 +53,12 @@ public class DictionaryCommandline {
 		System.out.println("Cac tu : " + s + " la: ");
 //		forEach duyet listWord
 //		i.getWord_target().indexOf(s) dung de kiem tra co bao nhieu tu bat dau bang s or cung co the la s.target giong trong listWord
-		Dictionary.listWord.forEach((i) -> {
+		for( Word i : Dictionary.listWord) {			
 			int index = i.getWord_target().indexOf(s);
 			if	(index == 0) {
 				System.out.println(i.getWord_target() + "\t" + i.getWord_explain());
 			}
-		});
+		}
 	}
 	
 	/**
@@ -64,7 +66,7 @@ public class DictionaryCommandline {
 	 */
 	public static void main(String []args) throws FileNotFoundException {
 		DictionaryCommandline x = new DictionaryCommandline();
-//		x.dictionaryBasic();
+		x.dictionaryBasic();
 		try {
 			x.dictionaryAdvanced();
 		} catch (FileNotFoundException e) {
