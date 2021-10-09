@@ -64,8 +64,14 @@ public class DictionaryCommandline {
 	 */
 	public static void main(String []args) throws FileNotFoundException {
 		DictionaryCommandline x = new DictionaryCommandline();
-		x.dictionaryBasic();
-//		x.dictionaryAdvanced();
+//		x.dictionaryBasic();
+		try {
+			x.dictionaryAdvanced();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		x.dictionarySreach();
 	}
 }
