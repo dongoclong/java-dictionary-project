@@ -1,5 +1,4 @@
-song1	song2
-love	yeu
+crush	rac
 love	yeu
 bal	bong
 long	dep trai
@@ -13,4 +12,3 @@ call	goi
 ball	qua bong
 bold	dam
 long1	cute
-long2	cute2
