@@ -28,20 +28,22 @@ public class DictionaryCommandline {
 	 * the method dictionary basic from version 1
 	 * insert the list word from command line
 	 * call insertFromCommandlinde method and showAllWord method 
+	 * @throws IOException 
+	 * @throws FileNotFoundException 
 	 */
-	public void dictionaryBasic() {
+	public void dictionaryBasic() throws FileNotFoundException, IOException {
 		dictionaryManagemment.insertFromCommandline();
 		dictionaryManagemment.removeWord();
 		dictionaryManagemment.editWord();
-//		dictionaryManagemment.insertWord();
+		dictionaryManagemment.insertWord();
 		this.showAllWord();
 	}
 	
 	public void dictionaryAdvanced() throws FileNotFoundException, IOException{
 		dictionaryManagemment.insertFromFile();
 		dictionaryManagemment.dictionaryLookup();
-		this.showAllWord();
 		dictionaryManagemment.dictionaryExportToFile();
+		this.showAllWord();
 		this.dictionarySreach();
 	}
 	
@@ -68,8 +70,10 @@ public class DictionaryCommandline {
 	
 	/**
 	 * test thu chuong trinh trong main
+	 * @throws FileNotFoundException
+	 * @throws IOException 
 	 */
-	public static void main(String []args) throws FileNotFoundException {
+	public static void main(String []args) throws IOException,FileNotFoundException {
 		DictionaryCommandline x = new DictionaryCommandline();
 		x.dictionaryBasic();
 		try {
@@ -79,6 +83,6 @@ public class DictionaryCommandline {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		x.dictionarySreach();
+//		x.dictionarySreach();
 	}
 }

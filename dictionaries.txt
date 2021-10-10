@@ -1,5 +1,9 @@
-long dep trai
-cute 123
+song1	song2
+love	yeu
+love	yeu
+bal	bong
+long	dep trai
+cute	123
 dog	con cho
 cat	meo
 pig	lon
@@ -8,3 +12,5 @@ dot	dau cham
 call	goi
 ball	qua bong
 bold	dam
+long1	cute
+long2	cute2

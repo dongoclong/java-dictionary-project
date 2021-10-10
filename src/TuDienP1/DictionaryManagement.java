@@ -33,16 +33,20 @@ public class DictionaryManagement {
 	 * @throws FileNotFoundException
 	 */
 	public void insertFromFile() throws FileNotFoundException {
+		int idxTarget = 0;
+		int idxExplain = 1;
 		Scanner scan = new Scanner(new File("dictionaries.txt"));
 		while(scan.hasNext()) {
 			String stringWord = scan.nextLine();
-//			trong file co dinh dang: phan cach giua tu va giai nghia la dau tab
-//            Su dung phương thuc useDelimiter() de dinh dang nhap vao				
-			Scanner s = new Scanner(stringWord).useDelimiter("\t");
-			Word _word = new Word();
-			_word.setWord_target(s.next());
-			_word.setWord_explain(s.next());
-			myDictionary.listWord.add(_word);
+			String[] parts = stringWord.split("\t");	
+			if (parts.length >= 2) {
+				Word _word = new Word();
+				_word.setWord_target(parts[idxTarget]);
+				_word.setWord_explain(parts[idxExplain]);
+				myDictionary.listWord.add(_word);
+			} else {
+				System.out.println("Gia tri co nhieu nghia");
+			}
 		}
 	}
 	
