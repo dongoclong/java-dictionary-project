@@ -1,14 +1,117 @@
-crush	rac
+love	ghet
 love	yeu
-bal	bong
-long	dep trai
-cute	123
-dog	con cho
-cat	meo
-pig	lon
-do	lam viec
-dot	dau cham
-call	goi
-ball	qua bong
-bold	dam
-long1	cute
+long	cute
+love	ghet
+l	l
+Account	Tai Khoan
+Available	co san
+Activity	hoat dong
+Appear	xuat hien
+After	sau do
+Actor	dien vien
+Angle	thien than
+Area	khu vuc
+Burn	chay
+Book	cuon sach
+Bill	hoa don
+Blue	mau xanh
+Beer	Bia
+Bird	con chim
+Boat	thuyen
+Back	tro lai
+Cook	nau an
+Construction	xay dung
+Conversation	cuoc hoi thoai
+Can	co the
+Cry	khoc
+Cat	con meo
+Cake	banh ngot
+Cool	mat me
+Call	goi
+Cent	dong xu
+Club	Cau lac bo
+Core	cot loi
+Department	phong ban
+Difficulty	kho khan
+Detective	tham tu
+District	quan huyen
+Document	tai lieu
+Disease	benh tat
+Desert	sa mac
+Delete	xoa
+Doctor	Bac si
+Daily	hang ngay
+Extensive	sau rong
+Education	giao duc
+Explosion	vu no
+Elephant	Con voi
+Friend	ban
+Friday	thu 6
+Father	bo
+Foot	ban chan
+Food	thuc an
+Future	tuong lai
+Fix	sua chua
+Far	xa
+Fist	con ca
+Good	tot
+Girl	con gai
+Gift	mon qua
+Garage	gara oto
+Grow	phat trien
+Hackman	Tai xe tacxi
+Homework	bai tap ve nha
+Housework	Viec nha
+Intelligent	Thong minh
+Inconvenient	Bat tien
+Important	quan trong
+Judge	tham phan
+Job	viec lam
+Join	Tham gia
+Key	Chia khoa
+Keyboard	Ban phim
+Kind	Tot bung
+Laboratory	Phong thi nghiem
+Language	Ngon ngu
+Lecture	bai hoc
+Monkey	Con khi
+Manager	quan li
+Material	vat lieu
+Necessary	can thiet
+Need	can
+Noisy	on ao
+Objection	su phan doi
+Overflow	su tran day
+Obedient	vang loi
+Physically	the chat
+Programming	Chuong trinh
+Pyramid	kim tu thap
+Question	cau hoi
+Quantity	so luong
+Quantification	su dinh luong
+Radio	Vo tuyen
+Ready	San sang
+Real	Su that
+Solution	cach giai quyet
+Soon	Som
+Something	Thu gi do
+Table	Cai ban
+Tall	Cao
+Tower	Toa thap
+University	Truong dai hoc
+Umbrella	chiec du
+Understand	hieu
+Vacation	ky nghi
+Visit	Chuyen tham
+Week	Tuan
+Wall	Tuong
+Well	Tot
+Xenogamy	Su lai cheo
+Xenophobic	Bài ngoại
+Xanthic	mau vang nhat
+Year	Nam
+Yard	San nha
+Yellow	Mau vang
+Zoom	Phong
+Zone	khu vuc
+Zymometer	do do len men
