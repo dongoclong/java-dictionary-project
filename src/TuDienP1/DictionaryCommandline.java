@@ -73,18 +73,17 @@ public class DictionaryCommandline {
 			System.out.println("Khong co tu nay trong tu dien, than!");
 		} else  if (list.size() > 5) {
 			List<Word> fiveElement = list.subList(0, 5);
-			String rs = this.showListWor(fiveElement);
+			String rs = this.showListWord(fiveElement);
 			System.out.println("Result: \n" + rs);
 		} else {
-			String rs = this.showListWor(list);
+			String rs = this.showListWord(list);
 			System.out.println("Result: \n" + rs);
 		}
 	}
 	
-	public String showListWor(List<Word> list) {
+	public String showListWord(List<Word> list) {
 		String result = "";
 		int count = 1;
-		
 		for(Word i : list) {
 			String wResult = count + "      |" + i.getWord_target() + "\t\t|" + i.getWord_explain() + "\n";
 			result += wResult;
