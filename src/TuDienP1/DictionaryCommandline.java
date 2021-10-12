@@ -67,7 +67,7 @@ public class DictionaryCommandline {
 		String s;
 		Scanner scan = new Scanner(System.in);
 		s= scan.nextLine();
-		System.out.println("Cac tu : " + s + " la: ");
+		System.out.println("Cac tu bat dau  : " + s + " la: ");
 		ArrayList<Word> list = this.dictionarySearch(s);
 		if (list.size() == 0) {
 			System.out.println("Khong co tu nay trong tu dien, than!");

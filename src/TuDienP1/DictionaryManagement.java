@@ -83,7 +83,7 @@ public class DictionaryManagement {
 		boolean check = false;
 		for (Word i : Dictionary.listWord) {
 			if (i.getWord_target().equalsIgnoreCase(stringWord)) {
-				System.out.println("Tu nay da co trong tu dien roi ...");
+				System.out.println("Tu nay da co trong tu dien roi, than!");
 				check = true;
 				break;
 			}
@@ -92,7 +92,7 @@ public class DictionaryManagement {
 			System.out.println("Nhap nghia cua tu nay: ");
 			String stringExplain = scan.nextLine();
 			Dictionary.listWord.add(new Word(stringWord,stringExplain));
-			System.out.println("Tu da duoc them vao thanh cong");
+			System.out.println("Tu da duoc them vao thanh cong, than!");
 		}
 	}
 	/**
@@ -114,7 +114,7 @@ public class DictionaryManagement {
 			System.out.println("Xoa thanh cong tu trong tu dien");
 		} 
 		else {
-			System.out.println("Khong co tu nay trong tu dien");
+			System.out.println("Khong co tu nay trong tu dien, than!");
 		}
 	}
 	
@@ -139,7 +139,7 @@ public class DictionaryManagement {
 			}
 		}
 		if (!check) {
-			System.out.println("Tu nay khong co trong tu dien");
+			System.out.println("Tu nay khong co trong tu dien, than!");
 		}
 	}
 	
