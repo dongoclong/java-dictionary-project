@@ -104,12 +104,20 @@ public class DictionaryManagement {
 		System.out.println("Nhap tu can xoa: ");
 		word_target = scan.nextLine();
 		boolean check = false;
-		for (Word i : Dictionary.listWord) {
-			if (i.getWord_target().equalsIgnoreCase(word_target)) {
-				Dictionary.listWord.remove(i);
+		
+		for	(int i = 0;	i < Dictionary.listWord.size();	i++) {
+			Word ans = Dictionary.listWord.get(i);
+			if (ans.getWord_target().equalsIgnoreCase(word_target)) {
+				Dictionary.listWord.remove(ans);
 				check = true;
 			}
 		}
+//		for (Word i : Dictionary.listWord) {
+//			if (i.getWord_target().equalsIgnoreCase(word_target)) {
+//				Dictionary.listWord.remove(i);
+//				check = true;
+//			}
+//		}
 		if (check) {
 			System.out.println("Xoa thanh cong tu trong tu dien");
 		} 
@@ -131,7 +139,7 @@ public class DictionaryManagement {
 				System.out.println("Nhap tu moi: ");
 				String Newtarget = scan.nextLine();
 				i.setWord_target(Newtarget);
-				System.out.println("Nghia cua tu moi la: ");
+				System.out.println("Nghia cua tu moi la: "); 
 				String Neweplain = scan.nextLine();
 				i.setWord_explain(Neweplain);
 				check = true;

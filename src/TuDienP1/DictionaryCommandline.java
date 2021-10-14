@@ -9,7 +9,6 @@ import java.util.Scanner;
 //import java.io.File;
 import java.util.*;
 
-
 public class DictionaryCommandline {
 	
 	DictionaryManagement dictionaryManagemment = new DictionaryManagement();
@@ -36,9 +35,9 @@ public class DictionaryCommandline {
 	 */
 	public void dictionaryBasic() throws FileNotFoundException, IOException {
 		dictionaryManagemment.insertFromCommandline();
-//		dictionaryManagemment.removeWord();
-//		dictionaryManagemment.editWord();
-//		dictionaryManagemment.insertWord();
+		dictionaryManagemment.removeWord();
+		dictionaryManagemment.editWord();
+		dictionaryManagemment.insertWord();
 		this.showAllWord();
 	}
 	
@@ -100,14 +99,14 @@ public class DictionaryCommandline {
 	 */
 	public static void main(String []args) throws IOException,FileNotFoundException {
 		DictionaryCommandline x = new DictionaryCommandline();
-//		x.dictionaryBasic();
-		try {
-			x.dictionaryAdvanced();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		x.dictionaryBasic();
+//		try {
+//			x.dictionaryAdvanced();
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 //		x.dictionarySreach();
 	}
 }
