@@ -100,13 +100,12 @@ public class DictionaryCommandline {
 	public static void main(String []args) throws IOException,FileNotFoundException {
 		DictionaryCommandline x = new DictionaryCommandline();
 		x.dictionaryBasic();
-//		try {
-//			x.dictionaryAdvanced();
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		x.dictionarySreach();
+		try {
+			x.dictionaryAdvanced();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
