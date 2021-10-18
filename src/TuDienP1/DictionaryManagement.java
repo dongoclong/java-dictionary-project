@@ -83,7 +83,7 @@ public class DictionaryManagement {
 		boolean check = false;
 		for (Word i : Dictionary.listWord) {
 			if (i.getWord_target().equalsIgnoreCase(stringWord)) {
-				System.out.println("Tu nay da co trong tu dien roi ...");
+				System.out.println("Tu nay da co trong tu dien roi, than!");
 				check = true;
 				break;
 			}
@@ -92,7 +92,7 @@ public class DictionaryManagement {
 			System.out.println("Nhap nghia cua tu nay: ");
 			String stringExplain = scan.nextLine();
 			Dictionary.listWord.add(new Word(stringWord,stringExplain));
-			System.out.println("Tu da duoc them vao thanh cong");
+			System.out.println("Tu da duoc them vao thanh cong, than!");
 		}
 	}
 	/**
@@ -104,17 +104,25 @@ public class DictionaryManagement {
 		System.out.println("Nhap tu can xoa: ");
 		word_target = scan.nextLine();
 		boolean check = false;
-		for (Word i : Dictionary.listWord) {
-			if (i.getWord_target().equalsIgnoreCase(word_target)) {
-				Dictionary.listWord.remove(i);
+		
+		for	(int i = 0;	i < Dictionary.listWord.size();	i++) {
+			Word ans = Dictionary.listWord.get(i);
+			if (ans.getWord_target().equalsIgnoreCase(word_target)) {
+				Dictionary.listWord.remove(ans);
 				check = true;
 			}
 		}
+//		for (Word i : Dictionary.listWord) {
+//			if (i.getWord_target().equalsIgnoreCase(word_target)) {
+//				Dictionary.listWord.remove(i);
+//				check = true;
+//			}
+//		}
 		if (check) {
 			System.out.println("Xoa thanh cong tu trong tu dien");
 		} 
 		else {
-			System.out.println("Khong co tu nay trong tu dien");
+			System.out.println("Khong co tu nay trong tu dien, than!");
 		}
 	}
 	
@@ -131,7 +139,7 @@ public class DictionaryManagement {
 				System.out.println("Nhap tu moi: ");
 				String Newtarget = scan.nextLine();
 				i.setWord_target(Newtarget);
-				System.out.println("Nghia cua tu moi la: ");
+				System.out.println("Nghia cua tu moi la: "); 
 				String Neweplain = scan.nextLine();
 				i.setWord_explain(Neweplain);
 				check = true;
@@ -139,7 +147,7 @@ public class DictionaryManagement {
 			}
 		}
 		if (!check) {
-			System.out.println("Tu nay khong co trong tu dien");
+			System.out.println("Tu nay khong co trong tu dien, than!");
 		}
 	}
 	
